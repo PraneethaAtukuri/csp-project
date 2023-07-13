@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    height:auto;
+
+}
+.container img{
+    height:612px;
+    width:1535px;
+    display: block;
+}
+
+.text{
+    position: absolute;
+    top:10%;
+    left:5px;
+    color:black;
+    font-size:40px;
+    font-family: "Palatino ","serif";
+}
