@@ -1,24 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/farmerLogo.png";
-import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import {GiHamburgerMenu} from 'react-icons/gi'
-function Navbar() {
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutubeSquare,
+} from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
-    <div className="navbar">
-        <div className="leftSide">
-            <img src={Logo} alt="Logo" />
+    <>
+      <nav className="main-nav">
+        {/* 1st logo part  */}
+        <div className="logo">
+        <img src={Logo} alt="Logo" />
         </div>
-        <div className="rightSide">
-        <Link to="/">Home </Link>
-        <Link to="/About Us">About Us</Link>
-        <Link to="/problems">Problems</Link>
-        <Link to="/solutions">Solutions</Link>
-        <Link to="/contact us">Contact Us</Link>
-        <GiHamburgerMenu/>
+
+        {/* 2nd menu part  */}
+        <div
+          className={
+            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+          }>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/aboutus">About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/whatwedo">What we do</NavLink>
+            </li>
+            <li>
+              <NavLink to="/advice">Advice</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contactus">Contact Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/login">Login</NavLink>
+            </li>
+            <li>
+              <NavLink to="/register">Register</NavLink>
+            </li>
+          </ul>
         </div>
-      </div>
+
+        {/* 3rd social media links */}
+        <div className="social-media">
+          <ul className="social-media-desktop">
+            <li>
+                <FaFacebookSquare className="facebook" />
+            </li>
+            <li>
+                <FaInstagramSquare className="instagram" />
+            </li>
+            <li>
+                <FaYoutubeSquare className="youtube" />
+            </li>
+          </ul>
+
+          {/* hamburget menu start  */}
+          <div className="hamburger-menu">
+            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+              <GiHamburgerMenu />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </>
   );
-}
+};
 
 export default Navbar;

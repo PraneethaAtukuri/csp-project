@@ -1,23 +1,15 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from 'react';
 import Farmer from "../assets/Farmer.jpg";
 import "../styles/Home.css";
-
+import BaseHOC from '../layouts/BaseHOC';
 function Home() {
   return (
     <div>
-      <Navbar/>
-      <div className="home" >
-      <div class="container">
-            <img src={Farmer}  alt= "Farmer" />
-      <div class="text">
-        <h3>Reducing Death Rate of Farmers</h3>
-      </div>
+      <div className="home">
+        <h1 className='text'>Reducing death rate of farmers </h1>
              </div>
-          
-          </div>
           </div>                                                                                                      
   )
 }
 
-export default Home;
+export default BaseHOC(Home);

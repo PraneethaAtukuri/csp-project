@@ -1,17 +1,21 @@
 import React from 'react'
-import InstagramIcon from "@material-ui/icons/Instagram";
-import { Instagram } from '@material-ui/icons';
+import {FaInstagram} from 'react-icons/fa';
+import {AiOutlineFacebook} from 'react-icons/ai';
+import {BiLogoGmail} from 'react-icons/bi';
+import "../styles/Footer.css";
 
 function Footer() {
   return (
     <div className="footer">
         <div className="socialMedia">
-            <InstagramIcon/>
+            <FaInstagram><a href=''></a></FaInstagram>
+            <AiOutlineFacebook/>
+            <BiLogoGmail/>
         </div>
-        <p> &copy; 2023 Reducingdeathrateoffarmers</p>
+        <p> &copy; 2023 Reducing death rate of farmers</p>
       
     </div>
   )
 }
 
-export default Footer
+export default Footer;
