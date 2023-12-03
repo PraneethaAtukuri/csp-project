@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import Contact1 from "../assets/contact1.jpeg";
 import Contact2 from "../assets/contact2.jpeg";
+import Contact3 from "../assets/kousi.jpg";
 import "../styles/Contactus.css";
 function Contactus() {
   return (
@@ -63,7 +64,7 @@ function Contactus() {
           </div>
           <div className="col-sm-6 col-md-4">
           <div className="team-item">
-            <img src={Contact2} />
+            <img src={Contact3} />
             <h3>P.Kousalya Supraja</h3>
             <div className="team-info">
               <p>Team member 3</p>
@@ -81,7 +82,7 @@ function Contactus() {
             </ul>
             </div>
             </div>
-            </div>
+          </div>
             </div>
     </section>
   )
